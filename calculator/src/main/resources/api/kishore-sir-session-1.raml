@@ -1,0 +1,57 @@
+#%RAML 1.0
+title: calculator session1
+version: v1.0.0
+protocols: [http,https]
+mediaType:  application/json
+traits:
+  quey : !include traits/trait.raml
+  
+/addition:
+  get:
+    is: [quey]
+    responses:
+      200:
+        body:
+            example: !include /examples/addition-response.json
+/subtraction:
+  post:
+    is: [quey]
+    responses:
+            200:
+              body:
+                  example: !include /examples/subtraction-response.json 
+/division:
+  put:
+    is: [quey]
+    responses:
+          200:
+            body:
+                example: !include examples/division-response.json
+/multiply:
+  delete:
+    is: [quey]
+    responses:
+          200:
+            body:
+                example: !include examples/multiply-response.json
+                  
+
+                
+                    
+      
+                                        
+                
+                            
+
+
+
+
+      
+
+                                              
+
+
+            
+                        
+      
+
